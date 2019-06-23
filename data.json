@@ -1,0 +1,21 @@
+{
+  "states": {
+    "179960469": "group_handler"
+  },
+  "last_call": {
+    "179960469": "\"Моделирование систем\" в кабинете №1"
+  },
+  "main": {},
+  "group_handler": {
+    "179960469": "446"
+  },
+  "schedule_handler": {},
+  "schedule_date_handler": {
+    "179960469": {
+      "dow": "1",
+      "parity": "2",
+      "pair": "3"
+    }
+  },
+  "lesson_handler": {}
+}
