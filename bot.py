@@ -6,7 +6,7 @@ import os
 import redis
 import json
 
-token = os.envision['BOT_TOKEN']
+token = os.environ['BOT_TOKEN']
 
 bot = telebot.TeleBot(token)
 api_url_main = 'http://81.2.244.179/api/schedule'
@@ -144,7 +144,6 @@ STATE_ENTER_MESSAGES = {
 @bot.message_handler(func=lambda message: True)
 def dispatcher(message):
     user_id = str(message.from_user.id)
-    print(user_id, data['states'][user_id])
 
     state = data['states'].get(user_id, MAIN_STATE)
     print('current state', user_id, state)
@@ -302,6 +301,7 @@ def lesson_handler(message):
                          reply_markup=STATE_ENTER_MESSAGES[LESSON_STATE]['reply_markup'])
 
         change_data('states', user_id, LESSON_STATE)
+
 
 
 bot.polling()
